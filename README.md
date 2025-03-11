@@ -10,4 +10,4 @@ __ https://realpython.com/python-pyqt-gui-calculator/ __
 
 pip install PyQt5
 
-C:/ diretory start file_name.py or C:/ directory code file_name.py
+C:/ directory start file_name.py or C:/ directory code file_name.py
