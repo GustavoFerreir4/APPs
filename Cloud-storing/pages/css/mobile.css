@@ -1,0 +1,33 @@
+/* Colors
+
+#5E17EB - roxo
+
+#F80068 - rosa shock
+
+#00F5FF - azul ciano
+
+#FA6101 - laranja
+
+#22B9FF - azul escuro
+
+
+*/
+
+.logo{
+    background-image: url('../../source/logo/DataBase.png');
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+}
+
+@media (max-width: 400px){
+    .show_nav_buttons{
+        background-image: url('../../source/tools/menu-button.png');
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        opacity: 50%;
+    }
+
+
+}
