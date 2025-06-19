@@ -24,3 +24,10 @@
 .container{
     display: flex;
 }
+
+footer{
+
+    position: relative; 
+    bottom: 10px;
+
+}
