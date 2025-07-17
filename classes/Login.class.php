@@ -10,11 +10,27 @@ class Login extends Db{
     }
 
     #methods
-    public function findUser(){
-        $stmt = $this->db();
-        $stmt = $stmt->prepare("SELECT * FROM users WHERE 'name' = :uid or 'email' = :uid");
-        $stmt->execute(['uid'=>$this->userid]);
-        $result = $stmt->fetch();
+    public function checkUser(){
+        $pdo = $this->db();
+        $result = $pdo->prepare('SELECT * FROM users WHERE name = ?');
+        $result->execute([$this->userid]);
+        $result = $result->fetch();
         
-        echo $result;
-    }}  
+       return $result;
+    }
+
+    public function checkPassword(){
+        $result = $this->checkUser();
+        if($result){
+            if($result['password'] == $this->password){
+               return  true;
+            }else{
+                return false;
+            }
+        }else{
+            return "";
+        }
+
+    }
+
+}  

@@ -6,7 +6,7 @@ class Db{
     private $name = "techfinder";
     private $user = "gustadev";
     private $password = "Gust4Fer1106";
-    protected $pdo;
+    public $pdo;
 
     #methods
     protected function db(){

@@ -20,4 +20,14 @@ if($errors){
 #object instance
 $user = new Login($uid, $pwd);
 
-echo $user->findUser();
+if($user->checkUser()){
+    echo "User exists <br>";
+}else{
+    echo "User Does not exist. <br>";
+};
+
+if($user->checkPassword()){
+    echo "Password match! <br>";
+}else{
+    echo "Password doesn't match. <br>";
+};
